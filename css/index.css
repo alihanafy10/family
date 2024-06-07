@@ -157,9 +157,9 @@ outline: none;
             position: relative;
             margin: auto; /* لتوسيط الدائرة أفقياً */
             margin-top: 50px; /* لتوسيط الدائرة عمودياً */
-            
+            animation: fed 1s 1s ease-in-out;
         }
-
+/* 
        .beginning  .circle-container::before {
     content: "";
     display: block;
@@ -169,13 +169,25 @@ outline: none;
     bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
-    /* background-color: var(--beginning-color); */
     border-radius: 50%;
     z-index: -1;
  animation-name: colorChange;
-  animation-duration: 3s;
+  animation-duration: 10s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+}
+ */
+.beginning .cora{
+    position: absolute;
+    width:84%;
+    height: 84%;
+    border-radius: 50%;
+    background-color: var(--beginning-color);
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    animation: colorChange 10s infinite ease-in-out,fedInUp 1s ease-in-out;
 }
 @keyframes colorChange{
     0%{
@@ -188,7 +200,16 @@ outline: none;
     background-color: var(--beginning-color);
 }
 }
-
+@keyframes fedInUp{
+    0%{
+        bottom: -100%;
+        opacity: 0;
+    }
+    100%{
+        bottom: -5px;
+        opacity: 1;
+    }
+}
 
 @media(max-width:576px){
     .beginning .circle-container{
@@ -241,6 +262,12 @@ padding:0 5px;
 @media (max-width:1200px){
     .beginning .row-two{
     margin-top: 40px;
+}
+@media(max-width:768px) {
+    .beginning .row-two img{
+        width: 50%!important;
+     
+    }
 }
 }
 .beginning .row-two h2{
