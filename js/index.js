@@ -90,3 +90,15 @@ const beginning = document.getElementById("beginning");
 beginning.style.marginTop = nav.offsetHeight + 'px'
 
 const colImg = document.getElementById('col-img')
+
+//Family-Health-Care
+const lis = document.querySelectorAll(".Family-Health-Care ul li");
+const rows = document.querySelectorAll(".Family-Health-Care .row-one");
+Array.from(lis).forEach((ele ,idx) => {
+  ele.addEventListener('click', (element) => {
+    Array.from(lis).forEach((el) => {el.classList.remove('active') })
+    Array.from(rows).forEach((el) => {el.classList.add('d-none') })
+    element.target.classList.add('active')
+    rows[idx].classList.remove('d-none')
+  })
+})

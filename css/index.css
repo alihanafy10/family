@@ -16,6 +16,7 @@ html{
     --beginning-two-color:#FEEDFA;
     --beginning-three-color:#E5F5F1;
     --succees-color:#11A07D;
+    --gray:#6A778B;
 }
 ul{
     list-style: none;
@@ -335,8 +336,8 @@ text-transform: capitalize;
 }
 /* start Family-Health-Care */
 .Family-Health-Care{
-    padding-top: 124px;
-    margin-top: 124px;
+    padding: 100px 0;
+    margin-top: 100px;
     background-color: var(--bg-dropdown);
 }
 .Family-Health-Care .container{
@@ -357,10 +358,299 @@ color: var(--main-color-three);
 text-align: center;
 margin: auto;
 max-width: 600px;
-/* Body/Large/400 */
 font-family: "Inter";
 font-size: 1.125rem;
 font-style: normal;
 font-weight: 400;
-line-height: 26px; /* 144.444% */
+line-height: 26px;
+}
+.Family-Health-Care ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Family-Health-Care ul li {
+    text-decoration: none;
+    color: var(--main-color-three);
+text-align: center;
+font-family: "Tajawal";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 24px; 
+padding: 10px 16px;
+border-bottom: 1px solid var(--main-color-three);
+
+}
+.Family-Health-Care ul li{
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.Family-Health-Care ul li.active  {
+    color: var(--main-color);
+    background-color: #fff;
+    border-bottom: 2px solid var(--main-color);
+}
+.Family-Health-Care .row-one{
+    padding: 32px;
+    background-color: #fff;
+    border-radius: 32px;
+box-shadow: 0px 16px 48px 0px rgba(0, 0, 0, 0.04);
+}
+.Family-Health-Care .row-one .date{
+    color: var(--main-color-two);
+font-family: "Inter";
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+margin-bottom: 24px;
+}
+.Family-Health-Care .row-one h3{
+    color: var(--main-color-two);
+text-align: right;
+font-family: "Tajawal";
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 700;
+line-height: 28px;
+letter-spacing: -0.24px;
+margin-bottom: 12px;
+}
+.Family-Health-Care .row-one p{
+    color: var(--main-color-three);
+text-align: right;
+font-family: "Inter";
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; 
+}
+.Family-Health-Care .title,.Health-Center .title {
+    padding-right: 25px;
+    border-right: 1px solid #ddd;
+    margin-right: 25px;
+}
+.Family-Health-Care .title h4,.Health-Center .title h4{
+    color: var(--main-color-two);
+text-align: right;
+font-family: "Inter";
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 500;
+line-height: 20px; 
+margin: 0;
+}
+.Family-Health-Care .title a,.Health-Center .title a{
+    text-decoration: none;
+    color: var(--gray);
+text-align: right;
+font-family: "Inter";
+font-size: 0.875rem;
+font-style: normal;
+font-weight: 400;
+line-height: 20px; 
+}
+.Family-Health-Care .title i{
+    margin-top: 5px!important;
+}
+
+.Family-Health-Care .row-two .layer{
+    border-radius: 16px;
+    overflow: hidden;
+background:#fff ;
+box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.10);
+}
+.Family-Health-Care .row-two .desc,.Health-Center .row .desc{
+   padding: 18px 25px 25px;
+}
+.Family-Health-Care .row-two .desc h3,.Health-Center .row .desc h3{
+    color: var(--main-color-two);
+text-align: right;
+font-family: "Tajawal";
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; 
+}
+
+/* start Health-Center */
+.Health-Center{
+    margin-top: 100px;
+}
+.Health-Center h2{
+    color: var(--main-color);
+font-family: "Tajawal";
+font-size: 2.5rem;
+font-weight: 700;
+letter-spacing: -1.12px;
+}
+.Health-Center .header p{
+    max-width: 600px;
+    color: var(--gray);
+font-family: "Inter";
+font-size: 1.125rem;
+font-weight: 400;
+line-height: 22px;
+}
+.Health-Center button{
+font-family: "Inter";
+font-size: 1rem;
+font-weight: 700;
+}
+
+.Health-Center .row .layer{
+box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.12);
+}
+/* start question */
+.question{
+    margin: 100px 0;
+    position: relative;
+    background: rgb(67,134,234);
+background: linear-gradient(0deg, rgba(67,134,234,1) 0%, rgba(109,161,239,1) 100%);
+}
+.question h2{
+    color: #fff;
+font-family: "Tajawal";
+font-size: 2.5rem;
+font-weight: 700;
+letter-spacing: -1.12px;
+margin: 0;
+}
+.question p{
+    color:#fff;
+font-family: "Inter";
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; 
+margin: 0;
+}
+.question button{
+    font-size: 1rem;
+}
+.question .layer{
+    gap: 20px;
+}
+.question .container{
+    position: relative;
+    z-index: 3;
+}
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: #78A9F0;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    z-index: 1;
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
 }
