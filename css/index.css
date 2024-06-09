@@ -4,6 +4,11 @@
 html{
     font-size: 16px;
 }
+@media (max-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+}
  :root{
     --main-color:#073B89;
     --main-color-two:#061C3D;
@@ -316,6 +321,11 @@ line-height: 1.5rem; /* 150% */
 }
 .beginning .row-three img,.beginning .row-three ul{
     margin-bottom: 24px;
+}
+@media (max-width: 768px){
+    .beginning .row-three img{
+        width: 100px;
+    }
 }
 .beginning .row-three ul{
     list-style: disc;
