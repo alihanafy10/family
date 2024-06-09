@@ -102,3 +102,20 @@ Array.from(lis).forEach((ele ,idx) => {
     rows[idx].classList.remove('d-none')
   })
 })
+
+//map
+
+let pos = document.getElementById("pos");
+let tath = document.getElementById("tath");
+
+pos.addEventListener("click", () => {
+  let liveMap;
+  if (navigator.geolocation) {
+    liveMap = navigator.geolocation.watchPosition(function (position) {
+      tath.innerHTML = `
+    <iframe class="w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d27628.787945417647!2d${position.coords.longitude}!3d${position.coords.latitude}!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1704648149440!5m2!1sar!2seg" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    `;
+      console.log(position);
+    });
+  }
+});
