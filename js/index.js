@@ -4,7 +4,22 @@ const dropdownTwo = document.getElementById('dropdownTwo');
 const ulTwo = document.getElementById('ulTwo');
 const aClick = document.getElementById("a-click");
 const iDeg = document.getElementById("iDeg");
-const iDegTwo = document.getElementById("iDegTwo");
+const iDegTwo = document.getElementById("iDegTwo")
+ const aClickLg = document.getElementById("a-click-lg");
+ const iDegLg = document.getElementById("iDeg-lg");
+const dropdownmenuId = document.getElementById("dropdown-menuId");
+ let parent = document.getElementById("parent");
+ let son = document.getElementById("son");
+let icona = document.getElementById("icona");
+ const nav = document.getElementById("nav");
+const beginning = document.getElementById("beginning");
+const colImg = document.getElementById("col-img");
+ const lis = document.querySelectorAll(".Family-Health-Care ul li");
+const rows = document.querySelectorAll(".Family-Health-Care .row-one");
+ let pos = document.getElementById("pos");
+let tath = document.getElementById("tath");
+ const pxSections = document.querySelector(".pxSections");
+
 dropdownTwo.addEventListener('mouseenter', () => {
     ulTwo.classList.remove('d-none')
     iDegTwo.classList.remove("bi-chevron-left");
@@ -34,10 +49,6 @@ document.addEventListener('click', () => {
     }
  })
 
-
- const aClickLg=document.getElementById('a-click-lg')
-const iDegLg = document.getElementById('iDeg-lg')
-const dropdownmenuId = document.getElementById("dropdown-menuId");
 aClickLg.addEventListener('mouseenter', () => {
      iDegLg.classList.remove("bi-chevron-left");
     iDegLg.classList.add("bi-chevron-down");
@@ -49,9 +60,6 @@ dropdownmenuId.addEventListener("mouseleave", () => {
   // iDegLg.style.backgroundColor = "transparent";
 });
 //search 
-let parent = document.getElementById("parent");
-let son = document.getElementById("son");
-let icona = document.getElementById("icona");
  son.addEventListener("focus", function () {
    parent.style.cssText = `
   transition:0.3s;
@@ -84,16 +92,9 @@ son.addEventListener("blur", function () {
     this.style.maxWidth = "0";
  })
 
-//beginning
-const nav=document.getElementById('nav')
-const beginning = document.getElementById("beginning");
-beginning.style.marginTop = nav.offsetHeight + 'px'
 
-const colImg = document.getElementById('col-img')
 
 //Family-Health-Care
-const lis = document.querySelectorAll(".Family-Health-Care ul li");
-const rows = document.querySelectorAll(".Family-Health-Care .row-one");
 Array.from(lis).forEach((ele ,idx) => {
   ele.addEventListener('click', (element) => {
     Array.from(lis).forEach((el) => {el.classList.remove('active') })
@@ -105,10 +106,9 @@ Array.from(lis).forEach((ele ,idx) => {
 
 //map
 
-let pos = document.getElementById("pos");
-let tath = document.getElementById("tath");
 
-pos.addEventListener("click", () => {
+try {
+  pos.addEventListener("click", () => {
   let liveMap;
   if (navigator.geolocation) {
     liveMap = navigator.geolocation.watchPosition(function (position) {
@@ -119,5 +119,13 @@ pos.addEventListener("click", () => {
     });
   }
 });
+} catch (err) {
+  console.log(err)
+}
+
+
+/* First section below navbar */
+pxSections.style.marginTop = nav.offsetHeight + "px";
+
 
 
