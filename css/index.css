@@ -304,6 +304,11 @@ line-height: 2rem;
     padding: 32px;
     border-radius: 16px;
 }
+@media(min-width:992px){
+    .beginning .row-three .layer{
+        height: 500px;
+}
+}
 .beginning .row-three .layer.layer1{
 background-color: var(--bg-dropdown);
 }
