@@ -308,6 +308,10 @@ line-height: 2rem;
     .beginning .row-three .layer{
         height: 550px;
 }
+    @media(min-width:1200px){
+    .beginning .row-three .layer{
+        height: 500px;
+}
 }
 .beginning .row-three .layer.layer1{
 background-color: var(--bg-dropdown);
