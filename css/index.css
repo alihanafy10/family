@@ -227,7 +227,6 @@ letter-spacing: -1.44px;
 .beginning .layer-top p{
     color: var(--main-color-two);
 text-align: right;
-/* Body/Xtra Large/400 */
 font-family: "Inter";
 font-size: 1.25rem;
 font-style: normal;
@@ -317,8 +316,6 @@ background-color: var(--beginning-three-color);
 .beginning .row-three p,.beginning .row-three li{
     color: var(--main-color-three);
 text-align: right;
-
-/* Body/Medium/400 */
 font-family: "Inter";
 font-size: 1rem;
 font-style: normal;
@@ -363,7 +360,7 @@ text-transform: capitalize;
 .Family-Health-Care .container{
     gap: 32px;
 }
-.Family-Health-Care .container >h2{
+.Family-Health-Care .container h2{
     color: var(--main-color);
 text-align: center;
 font-family: "Tajawal";
@@ -397,7 +394,7 @@ line-height: 26px;
     color: var(--main-color-three);
 text-align: center;
 font-family: "Tajawal";
-font-size: 18px;
+font-size: 1rem;
 font-style: normal;
 font-weight: 700;
 line-height: 24px; 
@@ -458,7 +455,7 @@ line-height: 24px;
     border-right: 1px solid #ddd;
     margin-right: 25px;
 }
-.Family-Health-Care .title h4,.Health-Center .title h4{
+.Family-Health-Care .title h4,.Health-Center .title h4,.Related-Topics a h5{
     color: var(--main-color-two);
 text-align: right;
 font-family: "Inter";
@@ -491,7 +488,7 @@ box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.10);
 .Family-Health-Care .row-two .desc,.Health-Center .row .desc{
    padding: 18px 25px 25px;
 }
-.Family-Health-Care .row-two .desc h3,.Health-Center .row .desc h3{
+.Family-Health-Care .row-two .desc h3,.Health-Center .row .desc h3,.Related-Topics a h4{
     color: var(--main-color-two);
 text-align: right;
 font-family: "Tajawal";
@@ -679,12 +676,32 @@ margin: 0;
 
 }
 /* start Media-arena */
-.Media-arena .row ul{
+.Media-arena .row ul,.Health-information ul{
 color: var(--main-color-two);
 font-family: "Inter";
 font-size: 0.875rem;
 font-weight: 400;
 line-height: 20px; 
+}
+.Media-arena .row ul li ,.Health-information ul li{
+overflow: hidden;
+}
+.Media-arena .row ul li a, .Health-information ul li a{
+color: var(--main-color-two);
+position: relative;
+}
+.Media-arena .row ul li a::before,.Health-information ul li a::before{
+position: absolute;
+content: "";
+width: 100%;
+height: 2px;
+background-color: var(--main-color-two);
+left: -100%;
+bottom: 0;
+transition: 0.3s;
+}
+.Media-arena .row ul li a:hover::before,.Health-information ul li a:hover::before{
+    left: 0;
 }
 .Media-arena .row h3{
 color: var(--main-color-two);
@@ -692,6 +709,10 @@ font-family: "Tajawal";
 font-size: 2rem;
 font-weight: 700;
 letter-spacing: -0.64px;
+transition: 0.3s;
+}
+.Media-arena .row h3:hover{
+    color:#003e9b;
 }
 .Media-arena .row p{
  color: var(--main-color-three);
@@ -860,11 +881,6 @@ footer .ul-soch li{
     width: fit-content;
     border-radius: 4px;
     margin-bottom: 5px;
-    /* display: flex; */
-/* width: 20px;
-height: 20px; */
-/* justify-content: center;
-align-items: center; */
 }
 footer .ul-soch li:nth-child(1) a{
     color: #1877F2;
@@ -970,13 +986,14 @@ font-weight: 400;
     color: var(--main-color-three);
 font-family: "Inter";
 }
-.Health-information .bodyy p{
+.Health-information .bodyy p,.Health-information .bodyy p a{
     color: var(--main-p );
 font-family: "Inter";
 font-size: 1.5rem;
 font-weight: 400;
 line-height: 32px; /* 133.333% */
 }
+
 .Health-information iframe{
    height: 730px;
 
@@ -1005,6 +1022,7 @@ font-family: "Tajawal";
 font-size: 2rem;
 font-weight: 700;
 letter-spacing: -0.72px;
+transition: 0.3s;
 }
 .Health-information h3{
     color: var(--nav-danger);
@@ -1012,6 +1030,13 @@ font-family: "Tajawal";
 font-size: 1.8rem;
 font-weight: 700;
 letter-spacing: -0.72px;
+transition: 0.3s;
+}
+.Health-information h2:hover{
+    color: #012357;
+}
+.Health-information h3:hover{
+color: #c20833;
 }
 .Health-information .spech-p{
     border-radius: 10px;
