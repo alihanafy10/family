@@ -308,6 +308,7 @@ line-height: 2rem;
     .beginning .row-three .layer{
         height: 550px;
 }
+}
     @media(min-width:1200px){
     .beginning .row-three .layer{
         height: 500px;
