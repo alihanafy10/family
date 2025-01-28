@@ -658,6 +658,12 @@ line-height: 26px;
   
  .row-3 .text-container {
     flex: 2; /* تأخذ ثلثين المساحة */
+    color: #061C3D;
+    font-family: "Tajawal";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
   }
 
 /* start question */
