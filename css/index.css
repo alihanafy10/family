@@ -536,6 +536,130 @@ font-weight: 700;
 .Health-Center .row .layer{
 box-shadow: 0px 12px 56px 0px rgba(6, 28, 61, 0.12);
 }
+
+
+.Health-Center .first-row .layer{
+    border-radius: 16px;
+    overflow: hidden;
+    gap:32px;
+   box-shadow: none !important;
+   border: 1px solid var(--Gray-100, #E6E8EC);
+}
+
+.Health-Center .first-row .first-row-p{
+    padding: 1.5rem;
+    color: var(--Gray-900, #061C3D);
+text-align: right;
+font-family: Tajawal;
+font-size: 1.125rem;
+font-style: normal;
+font-weight: 700;
+line-height: 26px;
+}
+.Health-Center .first-row .first-row-p:hover{
+    color: #EE305B;
+    transition: 0.3s;
+}
+
+
+.play-button-outer {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: rgba(0, 0, 0, .25);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  
+
+  
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; 
+  
+  }
+  
+  .video-thumbnail img {
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+  
+ 
+  
+  /* تنسيق المودال */
+  .modeling {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120% !important;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index:150000 !important;
+  }
+  
+  .modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+  }
+
+  /*video card*/
+
+  .video-card{
+    border: 1px solid var(--Gray-100, #E6E8EC);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .video-card .content{
+    padding: 1.7rem;
+  }
+  .video-card .content h3{
+    color: var(--main-color-two);
+    text-align: right;
+    font-family: "Tajawal";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+}
+.video-card .content h4{
+    color: var(--main-color-two);
+    text-align: right;
+    font-family: "Inter";
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin: 0;
+}
+  .video-card .play-button-outer{
+    background-color: transparent ;
+    width: 4.5rem;
+  }
+
+.row-3 .layer{
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--Gray-100, #E6E8EC);
+}
+.row-3 .image-container {
+    flex: 1; /* تأخذ ثلث المساحة */
+    padding-right: 10px; /* إذا كنت تحتاج مساحة بين الصورة والنص */
+  }
+  
+ .row-3 .text-container {
+    flex: 2; /* تأخذ ثلثين المساحة */
+  }
+
 /* start question */
 .question{
     margin: 100px 0;
