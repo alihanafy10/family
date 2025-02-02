@@ -177,3 +177,73 @@ document.querySelectorAll('.modeling').forEach((modal) => {
 });
 
 
+//فيديو الشاشات الكبيرة
+
+
+const isLargeScreen = () => window.matchMedia('(min-width: 992px)').matches;
+
+videoThumbnails.forEach((thumbnail) => {
+  thumbnail.addEventListener('click', () => {
+    if (!isLargeScreen()) return; // الخروج إذا كانت الشاشة أصغر من lg
+
+    const modalGeneral = document.querySelector('.modeling-general'); // تحديد المودال العام
+    const modalContent = document.getElementById('modal-content'); // تحديد محتوى المودال باستخدام ID
+
+    // إخفاء المودال السابق إذا كان مفتوحًا
+    if (!modalGeneral.classList.contains('d-none')) {
+      modalGeneral.classList.add('d-none');
+    }
+
+    // جلب محتوى .modeling-shado
+    const selectedShado = thumbnail.closest('.col-lg-3').querySelector('.modeling-shado');
+    if (selectedShado) {
+      // نسخ المحتوى من .modeling-shado إلى modal-content
+      modalContent.innerHTML = selectedShado.innerHTML; // نقل المحتوى
+
+      modalGeneral.classList.remove('d-none'); // عرض المودال العام
+
+      // إعادة تحميل iframe إذا كان موجودًا
+      const iframe = modalContent.querySelector('iframe');
+      if (iframe) {
+        iframe.src = iframe.src; // إعادة تحميل iframe لإيقاف الفيديو
+      }
+
+      // إعادة تحميل TikTok embed إذا كان موجودًا
+      const tiktokEmbed = modalContent.querySelector('blockquote');
+      if (tiktokEmbed) {
+        const newEmbed = tiktokEmbed.cloneNode(true);
+        tiktokEmbed.parentNode.replaceChild(newEmbed, tiktokEmbed);
+        
+        const script = document.createElement('script');
+        script.src = 'https://www.tiktok.com/embed.js';
+        document.body.appendChild(script);
+      }
+    }
+  });
+});
+
+// إغلاق المودال عند الضغط خارج الفيديو
+document.querySelectorAll('.modeling-general').forEach((modalGeneral) => {
+  modalGeneral.addEventListener('click', (event) => {
+    if (!event.target.closest('.modal-content')) {
+      modalGeneral.classList.add('d-none');
+      // إعادة تعيين src لإيقاف الفيديو
+      const iframe = modalGeneral.querySelector('iframe');
+      if (iframe) {
+        iframe.src = iframe.src; // إيقاف الفيديو
+      }
+    }
+  });
+});
+
+//rels
+$(".slick-rels").slick({
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  speed: 100,
+  slidesToScroll: 1,
+  dots: true,
+  infinite: false,
+  cssEase: "linear",
+  rtl: true,
+});

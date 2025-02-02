@@ -611,7 +611,51 @@ line-height: 26px;
     justify-content: center;
     height: auto;
   }
+  .modeling .modiling-parent{
+    height: 100% !important;
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  @media (min-width: 929px) {
+    .modeling-general{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 120% !important;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        z-index:150000 !important;
+    }
+    .modeling-general .modiling-parent{
+        height: 100% !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    .modal-content {
+        position:fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 75% !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+      }
+      .modal-content .modiling-parent{
+        height: 100% !important;
+        width: 100% !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  }
+ 
   /*video card*/
 
   .video-card{
@@ -646,6 +690,27 @@ line-height: 26px;
     width: 4.5rem;
   }
 
+  .first-row .video-thumbnail{
+    height: 392px;
+  }
+  @media (min-width: 768px) {
+    .first-row .video-thumbnail{
+        height: 350px;
+      }
+  }
+  @media (max-width: 468px) {
+    .first-row .video-thumbnail{
+        height: 300px;
+      }
+  }
+  /*rels*/
+
+  [dir='rtl'] .slick-next{
+    display: none !important;
+  }
+
+
+  /*rels*/
 .row-3 .layer{
     gap: 1rem;
     padding: 1rem;
